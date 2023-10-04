@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <style>
+        .container {
+            background-color: white;
+            height: 600px;
+        }
+        
+        .red {
+            background-color: red;
+            height: auto;
+            min-height: 50px;
+        }
+
+        .green {
+            background-color: rgb(4, 255, 4);
+            height: 50px;
+        }
+
+        .blue {
+            background-color: blue;
+            height: 100px;
+        }
+
+        .orange {
+            background-color: rgba(243, 141, 25, 0.921);
+            height: 200px;
+        }
+
+        .pink {
+            background-color: rgb(245, 50, 245);
+            height: 50px;
+        }
+
+        div{
+            border: 4px;
+            border-style: solid;
+            border-color: white;        
+        }
+
+        .row{
+            outline-style: solid;
+            outline-width: 1px;
+            outline-color: grey;
+        }
+        
+    </style>
+</head>
+
+<body>
+    
+    <div class="container">
+        <div class="row"> 
+            <div class="col-12 green"></div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-12 col-sm-3 red"></div>
+            
+            <div class="col-12 col-sm-9">
+                <div class="row">
+                    <div class="col-12 pink"></div>
+                    <div class="col-12 col-md-6 orange"></div>
+                    <div class="col-12 col-md-6 orange"></div>
+                    
+                    <div class="col-6 col-sm-4 col-md-2 blue"></div>
+                    <div class="col-6 col-sm-4 col-md-2 blue"></div>
+                    <div class="col-6 col-sm-4 col-md-4 blue"></div>
+                    <div class="col-6 col-sm-4 col-md-2 blue"></div>
+                    <div class="col-6 col-sm-4 col-md-2 blue"></div>
+
+                    <div class="col-6 col-sm-4 col-md-2 blue"></div>
+                    <div class="col-6 col-sm-4 col-md-2 blue"></div>
+                    <div class="col-6 col-sm-4 col-md-4 blue"></div>
+                    <div class="col-6 col-sm-4 col-md-2 blue"></div>
+                    <div class="col-6 col-sm-4 col-md-2 blue"></div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="row">
+            <div class="col-12 green"></div>
+        </div>
+
+    </div>
+
+
+    <br><br>
+    <p>En la disposición para tamaños grandes, se puede ver como el bloque central de las columnas de color azul tiene un tamaño diferente. Esto se debe a que las 12 posibles columnas del sistema de rejilla de Bootstrap no es divisible por este número de columnas. 
+        ¿Cómo podríamos hacer que las cinco columnas tengan el mismo tamaño?</p>
+    <br>
+    <p>Podemos usar el atributo offset para dividir 10 entre el número de columnas (12-2 = 10   10/5 = 2) </p>
+        <p align="center">Mi solución:</p>
+
+        <div class="container">
+            <div class="row"> 
+                <div class="col-12 green"></div>
+            </div>
+    
+            <div class="row">
+    
+                <div class="col-12 col-sm-3 red"></div>
+                
+                <div class="col-12 col-sm-9">
+                    <div class="row">
+                        <div class="col-12 pink"></div>
+                        <div class="col-12 col-md-6 orange"></div>
+                        <div class="col-12 col-md-6 orange"></div>
+                        
+                        <div class="col-6 col-sm-4 col-md-2 offset-md-1 blue"></div>
+                        <div class="col-6 col-sm-4 col-md-2 blue"></div>
+                        <div class="col-6 col-sm-4 col-md-2 blue"></div>
+                        <div class="col-6 col-sm-4 col-md-2 blue"></div>
+                        <div class="col-6 col-sm-4 col-md-2 blue"></div>
+    
+                        <div class="col-6 col-sm-4 col-md-2 offset-md-1 blue"></div>
+                        <div class="col-6 col-sm-4 col-md-2 blue"></div>
+                        <div class="col-6 col-sm-4 col-md-2 blue"></div>
+                        <div class="col-6 col-sm-4 col-md-2 blue"></div>
+                        <div class="col-6 col-sm-4 col-md-2 blue"></div>
+                    </div>
+                </div>
+                
+            </div>
+    
+            <div class="row">
+                <div class="col-12 green"></div>
+            </div>
+    
+        </div>
+
+</body>
+
+</html>
