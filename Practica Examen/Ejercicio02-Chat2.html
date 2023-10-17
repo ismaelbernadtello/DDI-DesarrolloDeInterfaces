@@ -1,0 +1,154 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+        <!-- eliminada la propiedad 'integrity' -->
+        <title>Prueba examen orden filas</title>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <!-- eliminada la propiedad 'integrity' -->
+        
+        <style>
+            .red{
+                background-color: red;
+                color: black;
+            }
+            .green{
+                background-color: green;
+                color: white;
+            }
+            .yellow{
+                background-color: yellow;
+                color: black;
+            }
+            .blue{
+                background-color: blue;
+                color: white;
+            }
+            .pink{
+                background-color: pink;
+                color: black;
+            }
+            .orange{
+                background-color: orange;
+                color: black;
+            }
+            .lime{
+                background-color: lime;
+                color: black;
+            }
+            .aqua{
+                background-color: aqua;
+                color: black;
+            }
+            .grey{
+                background-color: grey;
+                color: white;
+            }
+            .black{
+                background-color: black;
+                color: white;
+            }
+            .grupoMensajes{
+                width: max-content;
+                
+            }
+            .mensajeUsuario{
+                background-color: rgb(224, 224, 224);
+                border-radius: 3px;
+                padding:2px;
+                margin-bottom:3px;
+            }
+            .mensajeDest{
+                background-color: rgb(173, 255, 179);
+                border-radius: 3px;
+                padding:2px;
+                margin-bottom:3px;
+            }
+        </style>
+
+    </head>s
+    <body>
+        <div class="container" style="height: 100%;">
+            <div class="row" style="height: 100%;">
+                <div class="col-12 col-sm-10 offset-sm-1 col-md-6 offset-md-3 card" style="height: 90%; margin-top: 25px;">
+                    <div class="card-header">
+                        <span class="card-title" style="position:relative;top:10px;left: 10px;">Chat</span>
+                        <button style="position: relative; right: 0px; top: 10px;" class=" btn btn-primary">LET'S CHAT APP</button>
+                    </div>
+                    <div class="card-body" style="overflow-y:scroll;">
+                        <div class="row grupoMensajes" style="width: 100%;">
+                            <img src="img/person-circle.svg" class="iconoChat col-2 order-1 rounded-circle">
+                            <div class="col-10 order-2">
+                                <div class="mensajeUsuario">
+                                    <p>Hi</p>
+                                </div>
+                                <div class="mensajeUsuario">
+                                    <p>How are you ...???</p>
+                                </div>
+                                <div class="mensajeUsuario">
+                                    <p>What are you doing tomorrow? Can we come up with a bar?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row grupoMensajes" style="width: 100%;">
+                            <img src="img/person-circle.svg" class="iconoChat col-2 order-2 rounded-circle">
+                            <div class="col-10 order-1">
+                                <div class="mensajeDest">
+                                    <p>Hi</p>
+                                </div>
+                                <div class="mensajeDest">
+                                    <p>How are you ...???</p>
+                                </div>
+                                <div class="mensajeDest">
+                                    <p>What are you doing tomorrow? Can we come up with a bar?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row grupoMensajes" style="width: 100%;">
+                            <img src="img/person-circle.svg" class="iconoChat col-2 order-1 rounded-circle">
+                            <div class="col-10 order-2">
+                                <div class="mensajeUsuario">
+                                    <p>Hi</p>
+                                </div>
+                                <div class="mensajeUsuario">
+                                    <p>How are you ...???</p>
+                                </div>
+                                <div class="mensajeUsuario">
+                                    <p>What are you doing tomorrow? Can we come up with a bar?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row grupoMensajes" style="width: 100%;">
+                            <img src="img/person-circle.svg" class="iconoChat col-2 order-1 rounded-circle">
+                            <div class="col-10 order-2">
+                                <div class="mensajeUsuario">
+                                    <p>Hi</p>
+                                </div>
+                                <div class="mensajeUsuario">
+                                    <p>How are you ...???</p>
+                                </div>
+                                <div class="mensajeUsuario">
+                                    <p>What are you doing tomorrow? Can we come up with a bar?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer d-flex justify-content-around">
+                        <img width="25px" src="img/person-circle.svg">
+                        <input type="text" placeholder="Type message" style="border: none;">
+                        <div>
+                            <img width="20px" src="img/person-circle.svg">
+                            <img width="20px" src="img/person-circle.svg">
+                            <img width="20px" src="img/person-circle.svg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </body>
+</html>
