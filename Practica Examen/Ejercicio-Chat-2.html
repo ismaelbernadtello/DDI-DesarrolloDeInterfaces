@@ -22,21 +22,84 @@
         .blue{
             background-color: #00BFFF;
         }
-
+        .white{
+            background-color: #ffffff;
+        }
+        img {
+            border-radius: 50%;
+        }
+        .fondo{
+            background-color: #acb9bd;
+        }
     </style>
-
+    <!-- Intento de hacer esto: https://github.com/mdbootstrap/bootstrap-chat -->
 </head>
-<body>
-    <div class="container">
-        <div class="row d-flex justify-content-center">
-            <div class="blue navbar navbar-default navbar-fixed-top" style="max-width: 319px;">
-                <div class="card-header text-center">
-                    <span> $lt; </span> <span> LiveChat </span> <span> x </span>
+<body class="fondo">
+    <div class="container" style="border-width: 1%; border-color: black;">
+
+        <div class="row">
+            <div class="blue col-8 offset-2">
+                <div class="card-header d-flex justify-content-center">
+                    <i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i>
+                    <span style="color: #ffffff;">Live chat</span>
+                    <i class="fa-solid fa-ellipsis-v" style="color: #ffffff;"></i>
                 </div>
             </div>
-            <div class="d-flex flex-row">
-                <img src="https://www.w3schools.com/howto/img_avatar.png" class="rounded">
+        </div>
+
+        <div class="row d-flex" style="margin-top: 5%;">
+            <div class="white col-8 offset-2 d-flex">
+                <div class="col-2">
+                    <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="width: 100%;" class="rounded-circle">
+                </div>
+                <div class="blue col-8 offset-2" style="border-radius: 3%;">
+                    <span style="font-size: 125%;">Hello and thank for visiting mdbootstrap. Please click the video beloww.</span>
+                </div>
             </div>
+        </div>
+
+        <div class="row d-flex" style="margin-top: 5%;">
+            <div class="white col-8 offset-2 d-flex">
+                <div class="col-2 offset-2 order-2">
+                    <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="width: 100%;" class="rounded-circle">
+                </div>
+                <div class="blue col-8" style="border-radius: 3%;">
+                    <span style="font-size: 125%;">Hello and thank for visiting mdbootstrap. Please click the video beloww.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row d-flex" style="margin-top: 5%;">
+            <div class="white col-8 offset-2 d-flex">
+                <div class="col-2">
+                    <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="width: 100%;" class="rounded-circle">
+                </div>
+                <div class="blue col-8 offset-2" style="border-radius: 3%;">
+                    <span style="font-size: 125%;">Hello and thank for visiting mdbootstrap. Please click the video beloww.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row d-flex" style="margin-top: 5%;">
+            <div class="white col-8 offset-2 d-flex">
+                <div class="col-2">
+                    <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="width: 100%;" class="rounded-circle">
+                </div>
+                <div class="bcol-8 offset-2" style="border-radius: 3%;">
+                    <div class="blue" style="border-radius: 3%;">
+                        <span style="font-size: 125%;">...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 3%;">
+            <div class="col-10 offset-1">
+            <div class="form-floating mb-3">
+                <textarea class="form-control" placeholder="Escribe aquí"></textarea>
+                <label for="floatingTextarea">Type your message</label>
+            </div>
+
         </div>
     </div>
 </body>
