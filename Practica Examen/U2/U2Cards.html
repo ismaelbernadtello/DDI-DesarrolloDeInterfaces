@@ -19,20 +19,50 @@
     <title>Grid</title>
 
     <style>
-        
+        .red{
+            background-color: red;
+            height: 50px;
+        }
+        .green{
+            background-color: green;
+            height: 50px;
+        }
+        .blue{
+            background-color: blue;
+            height: 50px;
+        }
     </style>
 
 </head>
 <body>
     <div class="container">
         <div class="row">
-            <div class="red col-6 col-md-9 d-xl-none">A</div>
-            <div class="yellow col-6 col-md-3 col-xl-12 order-xl-1">B</div>
-            <div class="orange col-6 col-md-4 offset-md-2 col-xl-6 order-xl-3">C</div>
-            <div class="blue col-6 col-md-4 d-xl-none">D</div>
-            <div class="green col-6 d-md-none col-xl-6 order-xl-2 d-xl-inline">E</div>
-            <div class="purple col-6 col-md-10 col-xl-12 order-xl-4">F</div>
+            <h3>Bootstrap 4 Cards</h3>
+            <h5 style="color: grey;">Thanks to the new spaces utility classes there's a lot you can do</h5>
         </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-title d-flex">
+                                <div class="green col-1"> Icono 1</div>
+                                <div class="red col-1">Icono 2</div>
+                                <div class="blue col-10">Icono 3</div>
+                            </div>
+                    </div>
+                        
+                    </div>
+                </div>
+
+                <div class="col-6">
+
+                </div>
+
+
+            </div>
+        </div>
+
     </div>
 </body>
 </html>
