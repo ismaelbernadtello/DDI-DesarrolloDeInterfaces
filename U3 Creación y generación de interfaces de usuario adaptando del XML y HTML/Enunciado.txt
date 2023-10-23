@@ -1,0 +1,12 @@
+Usando bootstrap grid y Xhtml
+El cuadrado del centro es una imagen
+no pido que sea responsive, es decir que se debe ver igual en cualquier resolución
+https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate
+Ejercicio: Crea una página html con esta tabla en forma de tablero de parchís. Llámalo PARCHIS.XHTML
+los ficheros de codigo se deben entregar sin comprimir
+
+Debes comprobar que la web cumple el estándar de Accesibilidad usando las siguientes webs
+
+https://achecks.org/checker/index.php
+https://jigsaw.w3.org/css-validator/
+https://validator.w3.org/
