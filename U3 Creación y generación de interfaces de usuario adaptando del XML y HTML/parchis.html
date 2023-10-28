@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>U3A1 Parchís</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS v5.3.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .red {
+            background-color: red;
+        }
+        .green {
+            background-color: rgb(89,195,57);
+        }
+        .blue {
+            background-color:rgb(59,134,240);
+        }
+        .yellow {
+            background-color: yellow
+        }
+        .container {
+            width: 600px
+        }
+        .salida {
+            height: 100px;
+            width: 100px;
+            border: solid 1px black;
+        }
+        .casilla {
+            height: calc(200px/7);
+            width: calc(200px/3);
+            border-color: black;
+            border-style: solid;
+            border-width: 0.01rem;
+        }
+        .ficha {
+            border: solid 1px black;
+            border-radius: 50%;
+            background-color: lightsalmon;
+            width: 22px;
+            height: 22px;
+            margin: 0px;
+            padding: 0px;
+        }
+        img{
+            position: absolute;
+            height: 200px;
+            margin-left: -12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>U3A1 PARCHIS - Ismael Bernad Tello</h1>
+    <br>
+    <div class="container mx-auto ">
+        <!-- Fila superior, casa rojos, parte de tablero y casa azul -->
+        <div class="row">
+            <div class="col-4 red">
+                <div class="row">
+                    <div class="col-6">a</div>
+                    <div class="col-6">b</div>
+                    <div class="col-6">c</div>
+                    <div class="col-6">d</div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="row">
+                    <div class="col-4">35</div>
+                    <div class="col-4">34</div>
+                    <div class="col-4">33</div>
+
+                    <div class="col-4">36</div>
+                    <div class="col-4 red"></div>
+                    <div class="col-4">32</div>
+
+                    <div class="col-4">37</div>
+                    <div class="col-4 red"></div>
+                    <div class="col-4">31</div>
+
+                    <div class="col-4">38</div>
+                    <div class="col-4 red"></div>
+                    <div class="col-4">30</div>
+
+                    <div class="col-4">39</div>
+                    <div class="col-4 red"></div>
+                    <div class="col-4">29</div>
+
+                    <div class="col-4">40</div>
+                    <div class="col-4 red"></div>
+                    <div class="col-4">28</div>
+
+                    <div class="col-4">41</div>
+                    <div class="col-4 red"></div>
+                    <div class="col-4">27</div>
+                </div>
+            </div>
+            <div class="col-4 blue">
+                <div class="row">
+                    <div class="col-6">a</div>
+                    <div class="col-6">b</div>
+                    <div class="col-6">c</div>
+                    <div class="col-6">d</div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row"></div>
+
+
+        <div class="row"></div>
+
+    </div>
+</body>
+</html>
