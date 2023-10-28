@@ -23,7 +23,7 @@
         .container {
             width: 600px
         }
-        .salida {
+        .casa {
             height: 100px;
             width: 100px;
             border: solid 1px black;
@@ -57,51 +57,65 @@
     <div class="container mx-auto ">
         <!-- Fila superior, casa rojos, parte de tablero y casa azul -->
         <div class="row">
-            <div class="col-4 red">
+            <div class="col-4 red"> <!-- Casa jugador rojo -->
                 <div class="row">
-                    <div class="col-6">a</div>
-                    <div class="col-6">b</div>
-                    <div class="col-6">c</div>
-                    <div class="col-6">d</div>
+                    <div class="col-6 casa">a</div>
+                    <div class="col-6 casa">b</div>
+                    <div class="col-6 casa">c</div>
+                    <div class="col-6 casa">d</div>
                 </div>
             </div>
-            <div class="col-4">
-                <div class="row">
-                    <div class="col-4">35</div>
-                    <div class="col-4">34</div>
-                    <div class="col-4">33</div>
 
-                    <div class="col-4">36</div>
-                    <div class="col-4 red"></div>
-                    <div class="col-4">32</div>
+            <div class="col-4" style="transform: rotate(180deg);">
+                <div class="row d-flex">
+                    <div class="col-4 casilla text-end py-2 px-0 ">27</div>
+                    <div class="col-4 casilla red"></div>
+                    <div class="col-4 casilla text-start py-2 px-0">41</div>
+                </div>
 
-                    <div class="col-4">37</div>
-                    <div class="col-4 red"></div>
-                    <div class="col-4">31</div>
+                <div class="row d-flex">
+                    <div class="col-4 casilla text-end py-2 px-0">28</div>
+                    <div class="col-4 casilla red"></div>
+                    <div class="col-4 casilla text-start py-2 px-0">40</div>
+                </div>
 
-                    <div class="col-4">38</div>
-                    <div class="col-4 red"></div>
-                    <div class="col-4">30</div>
+                <div class="row d-flex">
+                    <div class="col-4 casilla text-end py-2 px-0">29</div>
+                    <div class="col-4 casilla red"></div>
+                    <div class="col-4 casilla text-start py-2 px-0">39</div>
+                </div>
 
-                    <div class="col-4">39</div>
-                    <div class="col-4 red"></div>
-                    <div class="col-4">29</div>
+                <div class="row d-flex">
+                    <div class="col-4 casilla text-end py-2 px-0">30</div>
+                    <div class="col-4 casilla red"></div>
+                    <div class="col-4 casilla text-start py-2 px-0">38</div>
+                </div>
 
-                    <div class="col-4">40</div>
-                    <div class="col-4 red"></div>
-                    <div class="col-4">28</div>
+                <div class="row d-flex">
+                    <div class="col-4 casilla text-end py-2 px-0">31</div>
+                    <div class="col-4 casilla red"></div>
+                    <div class="col-4 casilla text-start py-2 px-0">37</div>
+                </div>
 
-                    <div class="col-4">41</div>
-                    <div class="col-4 red"></div>
-                    <div class="col-4">27</div>
+                <div class="row d-flex">
+                    <div class="col-4 casilla text-end py-2 px-0">32</div>
+                    <div class="col-4 casilla red"></div>
+                    <div class="col-4 casilla text-start py-2 px-0">36</div>
+                </div> 
+
+                <div class="row d-flex">
+                    <div class="col-4 casilla text-end py-2 px-0">33</div>
+                    <div class="col-4 casilla red"></div>
+                    <div class="col-4 casilla text-start py-2 px-0">35</div>
                 </div>
             </div>
-            <div class="col-4 blue">
+
+            <div class="col-4 blue"> <!-- Casa jugador azul -->
                 <div class="row">
-                    <div class="col-6">a</div>
-                    <div class="col-6">b</div>
-                    <div class="col-6">c</div>
-                    <div class="col-6">d</div>
+                    <div class="col-6 casa">a</div>
+                    <div class="col-6 casa">b</div>
+                    <div class="col-6 casa">c</div>
+                    <div class="col-6 casa">d</div>
                 </div>
             </div>
         </div>
