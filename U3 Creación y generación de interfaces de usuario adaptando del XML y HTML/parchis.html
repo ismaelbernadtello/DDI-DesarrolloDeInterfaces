@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>U3A1 Parchís</title>
+    <title>U3A1 Parchís - Ismael Bernad Tello</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS v5.3.2 -->
@@ -38,7 +38,7 @@
         .ficha {
             border: solid 1px black;
             border-radius: 50%;
-            background-color: lightsalmon;
+            background-color: rgb(255, 140, 94);
             width: 22px;
             height: 22px;
             margin: 0px;
@@ -56,7 +56,7 @@
     <br>
     <div class="container mx-auto ">
         
-        <div class="row"> <!-- Fila superior, casa rojos, parte de tablero y casa azul -->
+        <div class="row"> <!-- Fila superior, casa rojo, parte de tablero y casa azul -->
             <div class="col-4 red"> <!-- Casa jugador rojo -->
                 <div class="row">
                     <div class="col-6 casa"></div>
@@ -78,9 +78,15 @@
                     <div class="col-4 casilla text-start py-2 px-0">40</div>
                 </div>
                 <div class="row d-flex">
-                    <div class="col-4 casilla text-end py-2 px-0">29</div>
+                    <div class="col-4 casilla justify-content-end text-end p-0 d-flex">
+                        <div class="ficha me-1 mt-1"></div>
+                        <div class=" mt-2 text-end">29</div>
+                    </div>
                     <div class="col-4 casilla red"></div>
-                    <div class="col-4 casilla text-start py-2 px-0">39</div>
+                    <div class="col-4 casilla red p-0 d-flex">
+                        <div class=" mt-2 flex-shrink-1">39</div>
+                        <div class="ficha ms-2 mt-1"></div>
+                    </div>
                 </div>
                 <div class="row d-flex">
                     <div class="col-4 casilla text-end py-2 px-0">30</div>
@@ -99,7 +105,10 @@
                 </div> 
                 <div class="row d-flex">
                     <div class="col-4 casilla text-end py-2 px-0">33</div>
-                    <div class="col-4 casilla red"></div>
+                    <div class="col-4 casilla justify-content-end text-end p-0 d-flex">
+                        <div class="ficha me-1 mt-1"></div>
+                        <div class=" mt-2 text-end">34</div>
+                    </div>
                     <div class="col-4 casilla text-start py-2 px-0">35</div>
                 </div>
             </div>
@@ -115,7 +124,7 @@
         </div>
 
 
-        <div class="row">
+        <div class="row"> <!-- Fila intermedia, 2 partes del tablero y centro-->
             <div class="col-4" style="transform: rotate(90deg);">
                 <div class="row d-flex">
                     <div class="col-4 casilla text-end py-2 px-0">44</div>
@@ -128,9 +137,15 @@
                     <div class="col-4 casilla text-start py-2 px-0">57</div>
                 </div>
                 <div class="row d-flex">
-                    <div class="col-4 casilla text-end py-2 px-0">46</div>
+                    <div class="col-4 casilla justify-content-end text-end p-0 d-flex">
+                        <div class="ficha me-1 mt-1"></div>
+                        <div class=" mt-2 text-end">46</div>
+                    </div>
                     <div class="col-4 casilla green"></div>
-                    <div class="col-4 casilla text-start py-2 px-0">56</div>
+                    <div class="col-4 casilla green p-0 d-flex">
+                        <div class=" mt-2 flex-shrink-1">56</div>
+                        <div class="ficha ms-2 mt-1"></div>
+                    </div>
                 </div>
                 <div class="row d-flex">
                     <div class="col-4 casilla text-end py-2 px-0">47</div>
@@ -149,7 +164,10 @@
                 </div>
                 <div class="row d-flex">
                     <div class="col-4 casilla text-end py-2 px-0">50</div>
-                    <div class="col-4 casilla green"></div>
+                    <div class="col-4 casilla justify-content-end text-end p-0 d-flex">
+                        <div class="ficha me-1 mt-1"></div>
+                        <div class=" mt-2 text-end">51</div>
+                    </div>
                     <div class="col-4 casilla text-start py-2 px-0">52</div>
                 </div>
             </div>
@@ -170,9 +188,15 @@
                     <div class="col-4 casilla text-start py-2 px-0">23</div>
                 </div>
                 <div class="row d-flex">
-                    <div class="col-4 casilla text-end py-2 px-0">12</div>
+                    <div class="col-4 casilla justify-content-end text-end p-0 d-flex">
+                        <div class="ficha me-1 mt-1"></div>
+                        <div class=" mt-2 text-end">12</div>
+                    </div>
                     <div class="col-4 casilla blue"></div>
-                    <div class="col-4 casilla text-start py-2 px-0">22</div>
+                    <div class="col-4 casilla blue p-0 d-flex">
+                        <div class=" mt-2 flex-shrink-1">22</div>
+                        <div class="ficha ms-2 mt-1"></div>
+                    </div>
                 </div>
                 <div class="row d-flex">
                     <div class="col-4 casilla text-end py-2 px-0">13</div>
@@ -191,14 +215,17 @@
                 </div>
                 <div class="row d-flex">
                     <div class="col-4 casilla text-end py-2 px-0">16</div>
-                    <div class="col-4 casilla blue"></div>
+                    <div class="col-4 casilla justify-content-end text-end p-0 d-flex">
+                        <div class="ficha me-1 mt-1"></div>
+                        <div class=" mt-2 text-end">17</div>
+                    </div>
                     <div class="col-4 casilla text-start py-2 px-0">18</div>
                 </div>
             </div>
         </div>
 
 
-        <div class="row">
+        <div class="row"> <!-- Filainferior, casa verde, parte de tablero y casa amarillo -->
             <div class="col-4 green"> <!-- Casa jugador verde -->
                 <div class="row">
                     <div class="col-6 casa"></div>
@@ -220,9 +247,15 @@
                     <div class="col-4 casilla text-start py-2 px-0">6</div>
                 </div>
                 <div class="row d-flex">
-                    <div class="col-4 casilla text-end py-2 px-0">63</div>
+                    <div class="col-4 casilla justify-content-end text-end p-0 d-flex">
+                        <div class="ficha me-1 mt-1"></div>
+                        <div class=" mt-2 text-end">63</div>
+                    </div>
                     <div class="col-4 casilla yellow"></div>
-                    <div class="col-4 casilla text-start py-2 px-0">5</div>
+                    <div class="col-4 casilla yellow p-0 d-flex">
+                        <div class=" mt-2 flex-shrink-1">5</div>
+                        <div class="ficha ms-2 mt-1"></div>
+                    </div>
                 </div>
                 <div class="row d-flex">
                     <div class="col-4 casilla text-end py-2 px-0">64</div>
@@ -241,7 +274,10 @@
                 </div>
                 <div class="row d-flex">
                     <div class="col-4 casilla text-end py-2 px-0">67</div>
-                    <div class="col-4 casilla yellow"></div>
+                    <div class="col-4 casilla justify-content-end text-end p-0 d-flex">
+                        <div class="ficha me-1 mt-1"></div>
+                        <div class=" mt-2 text-end">68</div>
+                    </div>
                     <div class="col-4 casilla text-start py-2 px-0">1</div>
                 </div>
             </div>
