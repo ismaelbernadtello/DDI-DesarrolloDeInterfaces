@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<!-- Bootstrap CSS v5.3.2 -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+	<!-- CSS personalizado -->
+	<link rel="stylesheet" href="css/custom.css">
+	<!-- Font-Awesome 6.1.0 (+ iconos aparte de los de Bootstrap) -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+	<!-- Google Fonts Iconos-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<title>One Piece - Ismael Bernad Tello</title>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<nav class="navbar navbar-expand-lg">
+					<div class="container-fluid">
+						<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#CollapseNavbar">
+							&#9776;
+						</button>
+
+						<a class="navbar-brand" href="Index.html">
+							<img src="images/logo.png" class="logo card-img-top img-fluid" alt="Logo">
+						</a>
+
+						<div class="collapse navbar-collapse" id="CollapseNavbar">
+							<ul class="navbar-nav col-7">
+								<li class="nav-item">
+									<a class="nav-link active" href="Index.html">
+										<em class="bi bi-house-fill fs-4"></em> 
+										Inicio 
+										<span class="sr-only"></span>
+									</a>
+								</li>
+
+								<li class="nav-item">
+									<a class="nav-link" href="Personajes.html">
+										<img src="images/iconoPersonajes.png" alt="Imagen de Personajes" class="iconoIMG">
+										Personajes
+									</a>
+								</li>
+								
+								<li class="nav-item">
+									<a class="nav-link" href="Habilidades.html">
+										<em class="bi bi-info-circle-fill fs-4"></em> 
+										Habilidades
+									</a>
+								</li>
+								
+								<li class="nav-item">
+									<a class="nav-link" href="Contacto.html">
+										<em class="bi-chat-left-dots fs-4"></em> 
+										Contacto
+									</a>
+								</li>
+							</ul>
+
+							<form class="d-flex col-lg-5">	
+								<label for="buscador" class="mt-2 me-1">Buscador:</label>
+								<input class="form-control" type="text" name="buscador" id="buscador" placeholder="One piece...">
+								<button class="btn btn-primary" type="submit">Buscar</button>
+							</form>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		
+        
+
+        
+        <div class="row">
+            <h4>Tripulación de los sombrero de paja</h4>
+            <div class="table-responsive">
+                <table class="table align-middle table-bordered border-secondary text-center table-striped overflow-auto">
+                    <thead>
+                        <tr class="text-start">
+                            <th scope="col" class="col-2">Imagen</th>
+                            <th scope="col" class="col-2">Nombre</th>
+                            <th scope="col" class="col-2">Rol</th>
+                            <th scope="col" class="col-2">Recompensa</th>
+                            <th scope="col" class="col-2">Historia</th>
+                            <th scope="col" class="col-2"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="align-items-center">
+                        <tr>
+                            <td>
+                                <img src="images/personajes/luffy.png" class="img-fluid" alt="Monkey D. Luffy">
+                            </td>
+                            <td>Monkey D. Luffy</td>
+                            <td>Capitán</td>
+                            <td class="text-end">1,500,000,000 Berries</td>
+                            <td>
+                                <textarea class="form-control" maxlength="500" rows="5"> Monkey D. Luffy es el protagonista de la serie de anime y manga "One Piece". Su historia
+                                    comienza cuando decide convertirse en el Rey de los Piratas y busca el tesoro legendario
+                                    conocido como "One Piece". Luffy es el capitán de la tripulación de los Sombrero de Paja y
+                                    tiene como objetivo llegar a la Isla Raftel, la ubicación final de One Piece. En su viaje,
+                                    Luffy se encuentra con una variedad de personajes y enfrenta numerosos desafíos en su búsqueda
+                                    del tesoro. Su historia está llena de aventuras emocionantes y momentos memorables.
+                                </textarea>
+                            </td>
+                            <td>
+                                <div class="dropdown">
+                                    <div class="btn-group dropup">
+                                        <button type="button" class="btn btn-primary dropdown-toggle" id="dropDownMenuLuffy"
+                                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Información
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropDownMenuLuffy">
+                                            <a class="dropdown-item" href="#">Biografía</a>
+                                            <a class="dropdown-item" href="#">Habilidades</a>
+                                            <a class="dropdown-item" href="#">Aventuras</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="images/personajes/zoro.png" class="img-fluid" alt="Roronoa Zoro">
+                            </td>
+                            <td>Roronoa Zoro</td>
+                            <td>Espadachín</td>
+                            <td class="text-end">320,000,000 Berries</td>
+                            <td>
+                                <textarea class="form-control" maxlength="500" rows="5"> Roronoa Zoro es el espadachín de la tripulación de los Sombrero de Paja en "One Piece". Tiene como objetivo convertirse en el espadachín más fuerte del mundo y sigue el estilo de lucha de tres espadas. Zoro tiene una recompensa de 320,000,000 de Berries. Su historia está llena de batallas impresionantes y momentos de determinación.
+                                </textarea>
+                            </td>
+                            <td>
+                                <div class="dropdown">
+                                    <div class="btn-group dropup">
+                                        <button type="button" class="btn btn-primary dropdown-toggle" id="dropDownMenuZoro"
+                                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Información
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropDownMenuZoro">
+                                            <a class="dropdown-item" href="#">Biografía</a>
+                                            <a class="dropdown-item" href="#">Habilidades</a>
+                                            <a class="dropdown-item" href="#">Aventuras</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="images/personajes/nami.png" class="img-fluid" alt="Nami">
+                            </td>
+                            <td>Nami</td>
+                            <td>Navegante</td>
+                            <td class="text-end">66,000,000 Berries</td>
+                            <td>
+                                <textarea class="form-control" maxlength="500" rows="5"> Nami es la navegante de la tripulación de los Sombrero de Paja. Su sueño es cartografiar todo el mundo y dibujar mapas. Tiene una recompensa de 66,000,000 de Berries. Nami es conocida por su habilidad para el clima y su amor por el dinero, pero también es leal a su tripulación y hará cualquier cosa para protegerlos.
+                                </textarea>
+                            </td>
+                            <td>
+                                <div class="dropdown">
+                                    <div class="btn-group dropup">
+                                        <button type="button" class="btn btn-primary dropdown-toggle" id="dropDownMenuNami"
+                                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Información
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropDownMenuNami">
+                                            <a class="dropdown-item" href="#">Biografía</a>
+                                            <a class="dropdown-item" href="#">Habilidades</a>
+                                            <a class="dropdown-item" href="#">Aventuras</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="images/personajes/ussop.png" class="img-fluid" alt="Usopp">
+                            </td>
+                            <td>Usopp</td>
+                            <td>Tirador</td>
+                            <td class="text-end">200,000,000 Berries</td>
+                            <td>
+                                <textarea class="form-control" maxlength="500" rows="5"> Usopp es el tirador de la tripulación de los Sombrero de Paja. Es conocido por su habilidad para crear y utilizar armas. Tiene una recompensa de 200,000,000 de Berries. Usopp es un mentiroso compulsivo, pero también es valiente y hará cualquier cosa por sus amigos.
+                                </textarea>
+                            </td>
+                            <td>
+                                <div class="dropdown">
+                                    <div class="btn-group dropup">
+                                        <button type="button" class="btn btn-primary dropdown-toggle" id="dropDownMenuUsopp"
+                                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Información
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropDownMenuUsopp">
+                                            <a class="dropdown-item" href="#">Biografía</a>
+                                            <a class="dropdown-item" href="#">Habilidades</a>
+                                            <a class="dropdown-item" href="#">Aventuras</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="images/personajes/sanji.png" class="img-fluid" alt="Sanji">
+                            </td>
+                            <td>Sanji</td>
+                            <td>Cocinero</td>
+                            <td class="text-end">330,000,000 Berries</td>
+                            <td>
+                                <textarea class="form-control" maxlength="500" rows="5"> Sanji es el cocinero de la tripulación de los Sombrero de Paja. Es conocido por su habilidad para cocinar y su amor por las mujeres. Tiene una recompensa de 330,000,000 de Berries. Sanji es un caballero y siempre protege a las mujeres, incluso si eso significa poner su vida en peligro.
+                                </textarea>
+                            </td>
+                            <td>
+                                <div class="dropdown">
+                                    <div class="btn-group dropup">
+                                        <button type="button" class="btn btn-primary dropdown-toggle" id="dropDownMenuSanji"
+                                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Información
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropDownMenuSanji">
+                                            <a class="dropdown-item" href="#">Biografía</a>
+                                            <a class="dropdown-item" href="#">Habilidades</a>
+                                            <a class="dropdown-item" href="#">Aventuras</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="images/personajes/chopper.png" class="img-fluid" alt="Tony Tony Chopper">
+                            </td>
+                            <td>Tony Tony Chopper</td>
+                            <td>Médico</td>
+                            <td class="text-end">100 Berries</td>
+                            <td>
+                                <textarea class="form-control" maxlength="500" rows="5"> Tony Tony Chopper es el médico de la tripulación de los Sombrero de Paja. Es un reno que comió la Fruta Hito Hito, lo que le permitió convertirse en un ser humano con habilidades médicas. A pesar de su apariencia linda, Chopper es un guerrero valiente y siempre está dispuesto a ayudar a sus amigos.
+                                </textarea>
+                            </td>
+                            <td>
+                                <div class="dropdown">
+                                    <div class="btn-group dropup">
+                                        <button type="button" class="btn btn-primary dropdown-toggle" id="dropDownMenuChopper"
+                                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Información
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropDownMenuChopper">
+                                            <a class="dropdown-item" href="#">Biografía</a>
+                                            <a class="dropdown-item" href="#">Habilidades</a>
+                                            <a class="dropdown-item" href="#">Aventuras</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="images/personajes/robin.png" class="img-fluid" alt="Nico Robin">
+                            </td>
+                            <td>Nico Robin</td>
+                            <td>Arqueóloga</td>
+                            <td class="text-end">130,000,000 Berries</td>
+                            <td>
+                                <textarea class="form-control" maxlength="500" rows="5"> Nico Robin es la arqueóloga de la tripulación de los Sombrero de Paja. Tiene la habilidad de leer los Poneglyphs, unos antiguos bloques de piedra que contienen información sobre la historia del mundo. Tiene una recompensa de 130,000,000 de Berries. Robin es una persona reservada y misteriosa, pero también es leal a su tripulación y hará cualquier cosa por protegerlos.
+                                </textarea>
+                            </td>
+                            <td>
+                                <div class="dropdown">
+                                    <div class="btn-group dropup">
+                                        <button type="button" class="btn btn-primary dropdown-toggle" id="dropDownMenuRobin"
+                                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Información
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropDownMenuRobin">
+                                            <a class="dropdown-item" href="#">Biografía</a>
+                                            <a class="dropdown-item" href="#">Habilidades</a>
+                                            <a class="dropdown-item" href="#">Aventuras</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="images/personajes/brook.png" class="img-fluid" alt="Brook">
+                            </td>
+                            <td>Brook</td>
+                            <td>Músico</td>
+                            <td class="text-end">83,000,000 Berries</td>
+                            <td>
+                                <textarea class="form-control" maxlength="500" rows="5"> Brook es el músico de la tripulación de los Sombrero de Paja. Es un esqueleto que comió la Fruta Yomi Yomi, lo que le permitió volver a la vida después de morir. Tiene una recompensa de 83,000,000 de Berries. Brook es un caballero y siempre está dispuesto a ayudar a sus amigos, pero también es conocido por su amor por las mujeres.
+                                </textarea>
+                            </td>
+                            <td>
+                                <div class="dropdown">
+                                    <div class="btn-group dropup">
+                                        <button type="button" class="btn btn-primary dropdown-toggle" id="dropDownMenuBrook"
+                                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Información
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropDownMenuBrook">
+                                            <a class="dropdown-item" href="#">Biografía</a>
+                                            <a class="dropdown-item" href="#">Habilidades</a>
+                                            <a class="dropdown-item" href="#">Aventuras</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="images/personajes/jinbe.png" class="img-fluid" alt="Jinbe">
+                            </td>
+                            <td>Jinbe</td>
+                            <td>Timonel</td>
+                            <td class="text-end">438,000,000 Berries</td>
+                            <td>
+                                <textarea class="form-control" maxlength="500" rows="5"> Jinbe es un pirata y ex-Shichibukai que se unió a la tripulación de los Sombrero de Paja después de los eventos de la Guerra de Marineford. Es conocido como el Caballero del Mar y tiene una gran habilidad en la lucha bajo el agua. Tiene una recompensa de 438,000,000 de Berries. Jinbe es un hombre sabio y respetado, y siempre está dispuesto a ayudar a sus amigos.
+                                </textarea>
+                            </td>
+                            <td>
+                                <div class="dropdown">
+                                    <div class="btn-group dropup">
+                                        <button type="button" class="btn btn-primary dropdown-toggle" id="dropDownMenuJinbe"
+                                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Información
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropDownMenuJinbe">
+                                            <a class="dropdown-item" href="#">Biografía</a>
+                                            <a class="dropdown-item" href="#">Habilidades</a>
+                                            <a class="dropdown-item" href="#">Aventuras</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+    </div>
+
+
+<!-- Bootstrap 5.3.2 popperjs y javascript-->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+</html>
