@@ -73,76 +73,93 @@
 				</nav>
 			</div>
 		
-		<div class="container ">
-			<div class="col">
-				<div class="card">
-					<div class="card-header">
-						<h4>Contacto</h4>
-					</div>
-					<div class="card-body p-5">
-						<form>
-							<div class="form-group row">
-								<label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-								<div class="col-sm-10">
-									<input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-								</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="card">
+							<div class="card-header">
+								<h4>Contacto</h4>
 							</div>
-							<div class="form-group row">
-								<label for="inputTelefono3" class="col-sm-2 col-form-label mt-2">Teléfono</label>
-								<div class="col-sm-10 mt-2">
-									<input type="number" class="form-control" name="inputTelefono3" id="inputTelefono3"
-										placeholder="Telefono">
-								</div>
-							</div>
-							<fieldset class="form-group mt-5">
-								<div class="row">
-									<div class="col-form-label col-sm-2 pt-0">Tipo de Consulta</div>
-									<div class="col-sm-10">
-										<div class="form-check">
-											<input class="form-check-input" type="radio" name="gridRadios"
-												id="gridRadios1" value="option1" checked>
-											<label class="form-check-label" for="gridRadios1">
-												Compra
-											</label>
-										</div>
-										<div class="form-check">
-											<input class="form-check-input" type="radio" name="gridRadios"
-												id="gridRadios2" value="option2">
-											<label class="form-check-label" for="gridRadios2">
-												Información
-											</label>
+							<div class="card-body p-5">
+								<form>
+									<div class="form-group row">
+										<label for="inputNombre" class="col-sm-2 col-form-label">Nombre</label>
+										<div class="col-sm-10">
+											<input type="text" class="form-control" name="inputNombre" id="inputNombre" placeholder="Tu Nombre">
 										</div>
 									</div>
-								</div>
-							</fieldset>
-							<div class="form-group row mt-5">
-								<div class="col-sm-2">Consulta</div>
-								<div class="col-sm-10">
-										<label for="exampleFormControlTextarea1">Escribe aquí tu consulta:</label>
-										<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-								</div>
-							</div>
-							<div class="form-group row mt-5">
-								<div class="col-sm-2">Privacidad</div>
-								<div class="col-sm-10">
-									<div class="form-check">
-										<input class="form-check-input" type="checkbox" id="gridCheck1">
-										<label class="form-check-label" for="gridCheck1">
-											Me das consentimiento para poseer tu alma por los siglos de los siglos
-										</label>
+									<div class="form-group row">
+										<label for="inputEmail" class="col-sm-2 col-form-label mt-2">Email</label>
+										<div class="col-sm-10 mt-2">
+											<input type="email" class="form-control" name="inputEmail" id="inputEmail" placeholder="Tu Email">
+										</div>
 									</div>
-								</div>
+									<div class="form-group row">
+										<label for="inputTelefono" class="col-sm-2 col-form-label mt-2">Teléfono</label>
+										<div class="col-sm-10 mt-2">
+											<input type="tel" class="form-control" name="inputTelefono" id="inputTelefono" placeholder="Tu Teléfono">
+										</div>
+									</div>
+									<fieldset class="form-group mt-5">
+										<div class="row">
+											<div class="col-form-label col-sm-2 pt-0">Tipo de Consulta</div>
+											<div class="col-sm-10">
+												<div class="form-check">
+													<input class="form-check-input" type="radio" name="tipoConsulta" id="consultaPregunta" value="Pregunta">
+													<label class="form-check-label" for="consultaPregunta">
+														Pregunta
+													</label>
+												</div>
+												<div class="form-check">
+													<input class="form-check-input" type="radio" name="tipoConsulta" id="consultaAportacion" value="Aportacion">
+													<label class="form-check-label" for="consultaAportacion">
+														Aportación
+													</label>
+												</div>
+												<div class="form-check">
+													<input class="form-check-input" type="radio" name="tipoConsulta" id="consultaInformacionIncorrecta" value="InformacionIncorrecta">
+													<label class="form-check-label" for="consultaInformacionIncorrecta">
+														Información Incorrecta
+													</label>
+												</div>
+												<div class="form-check">
+													<input class="form-check-input" type="radio" name="tipoConsulta" id="consultaOtro" value="Otro">
+													<label class="form-check-label" for="consultaOtro">
+														Otro
+													</label>
+												</div>
+											</div>
+										</div>
+									</fieldset>
+									<div class="form-group row mt-5">
+										<div class="col-sm-2">Consulta</div>
+										<div class="col-sm-10">
+											<label for="inputConsulta">Escribe aquí tu consulta:</label>
+											<textarea class="form-control" id="inputConsulta" name="inputConsulta" rows="3"></textarea>
+										</div>
+									</div>
+									<div class="form-group row mt-5">
+										<div class="col-sm-2">Privacidad</div>
+										<div class="col-sm-10">
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="privacidadCheckbox">
+												<label class="form-check-label" for="privacidadCheckbox">
+													Acepto la política de privacidad y el aviso legal. Además, admito que One Piece es el mejor anime de la historia.
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="form-group row">
+										<div class="col-12 text-center mt-4">
+											<button type="submit" class="btn btn-primary">Enviar</button>
+										</div>
+									</div>
+								</form>
 							</div>
-							<div class="form-group row">
-								<div class="col-12 text-center mt-4">
-									<button type="submit" class="btn btn-primary">Enviar</button>
-								</div>
-							</div>
-						</form>
+						</div>
 					</div>
 				</div>
-			</div>
-		</div>
+		
 
 	</div>
 
