@@ -1,0 +1,9 @@
+Sigue el tutorial del enlace adjunto
+
+
+sigue los 4 tutoriales
+realiza modificaciones propias sobre el tutorial, hasta donde te atrevas y entrega la tarea con una pequeña memoria de los pasos realizados mediante capturas de pantalla incrustadas en un documento
+la tarea se debe entregar en pdf, doc o googledoc sin comprimir
+el codigo se debe entregar mediante un enlace en la tarea que indique la url donde se encuentra tu código subido a tu cuenta de github
+
+https://javaplusstuff.hashnode.dev/series/spring-boot-plus-aws?authuser=0e
