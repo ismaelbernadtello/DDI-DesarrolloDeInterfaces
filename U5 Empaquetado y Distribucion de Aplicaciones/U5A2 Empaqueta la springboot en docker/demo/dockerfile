@@ -1,0 +1,3 @@
+FROM openjdk:17
+ADD target/tutorial.jar tutorial.jar
+ENTRYPOINT ["java", "-jar","tutorial.jar"]
