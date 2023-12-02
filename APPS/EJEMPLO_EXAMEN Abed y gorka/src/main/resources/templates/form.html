@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thyneleaf.org"> <!--th hace que esa etiqueta sea asociada con thyneleaf-->
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- 
+		PASO 3.
+		esto se enviara a localhost:8080/insertStudent 
+	-->
+	<form th:action="@{/insertHola}" th:object="${hola}"> 
+		<!-- 
+			th:action="@{/insertStudent}" es la ruta del controlador que recibira los datos.
+			th:object="${hola}" es el objeto que se enviara al controlador. 
+		th es un objeto de tyneleaf porque lo hemos puesto arriba del todo-->
+		<span>Nombre:</span>
+		<input type="text" th:field="*{nombre}"/>
+		<span>Email:</span>
+		<input type="email" th:field="*{email}"/>
+        <span>Contraseña:</span>
+		<input type="password" th:field="*{contracena}"/>
+        <span>Rol:</span>
+		<input type="text" th:field="*{rol}"/>
+		<input type="submit" value="Enviar datos"/>
+	</form>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thyneleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+		<th>
+            <td>id</td>
+			<td>nombre</td>
+            <td>email</td>
+            <td>contraseña</td>
+            <td>rol</td>
+		</th>
+		<tbody>
+			<tr th:each="h: ${holaLista}">
+                <td th:text="${h.id}"/>
+				<td th:text="${h.nombre}"/>
+                <td th:text="${h.email}"/>
+                <td th:text="${h.contracena}"/>
+                <td th:text="${h.rol}"/>
+                <td><a th:href="@{'/updateHola/'+${h.id}}">Update</a></td>
+				<td><a th:href="@{'/deleteHola/'+${h.id}}">Delete</a></td>
+			</tr>
+		</tbody>
+	</table> 
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Listado de Cervezas</title>
+</head>
+<body>
+    <h2>Listado de Cervezas</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Fecha Lanzamiento</th>
+            <th>Cervecería Antigua</th>
+            <th>Cervecería Nueva</th>
+        </tr>
+        <tr th:each="cerveza : ${cervezas}">
+            <td th:text="${cerveza.id}"></td>
+            <td th:text="${cerveza.nombre}"></td>
+            <td th:text="${cerveza.fechaLanzamiento}"></td>
+            <td th:text="${cerveza.cerveceriaAntigua.nombre}"></td>
+            <td th:text="${cerveza.cerveceriaNueva.nombre}"></td>
+        </tr>
+    </table>
+</body>
+</html>
