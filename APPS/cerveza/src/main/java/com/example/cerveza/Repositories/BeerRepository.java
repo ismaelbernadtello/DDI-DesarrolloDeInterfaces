@@ -17,7 +17,8 @@ public class BeerRepository {
     JdbcTemplate jdbcTemplate;
 
     public List<BeerModel> sacarTodasBeer(){ //Este método saca todas las cervezas de la BD usando el rowmapper
-        List<BeerModel> listaBeer = jdbcTemplate.query("SELECT * FROM beer", new BeerRowMapper());
+        String query = "SELECT b.*, brn.nombre as Nombre_NEW,bro.nombre as Nombre_OLD FROM BEER AS b LEFT JOIN BREWERY_NEW AS brn on b.BREWERY_NEW = brn.ID LEFT JOIN BREWERY_OLD AS bro on b.BREWERY_OLD = bro.ID;";
+        List<BeerModel> listaBeer = jdbcTemplate.query(query, new BeerRowMapper());
         return listaBeer;
     }
 
