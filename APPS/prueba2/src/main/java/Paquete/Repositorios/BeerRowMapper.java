@@ -21,7 +21,7 @@ class BeerRowMapper implements RowMapper<Beer>{
         beer.setFechaLanzamiento(rs.getDate("fechaLanzamiento"));
         beer.setCodigoBreweryNew(rs.getInt("brewery_new"));
         beer.setCodigoBreweryOld(rs.getInt("brewery_old"));
-        return beer;
+        return beer;new BeerModel()
     }
     
 
