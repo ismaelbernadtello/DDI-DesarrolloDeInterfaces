@@ -15,5 +15,8 @@ public class BeerModel { //Creamos la clase BeerModel con sus atributos, que son
     private Date fechaLanzamiento;
     private int codigoBreweryNew;
     private int codigoBreweryOld;
+    //Creamos dos objetos de tipo BreweryNewModel y BreweryOldModel para poder acceder a sus atributos desde la vista
+    private BreweryNewModel breweryNew;
+    private BreweryOldModel breweryOld;
 
 }
