@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thyneleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario actualizacion</title>
+</head>
+<body>
+    <form th:action="@{/actualizarBreweryNew}" th:object="${breweryNewModificar}">
+        <input hidden th:field="*{id}">
+        <h3>Nombre</h3>
+        <input type="text" th:field="*{nombre}">
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

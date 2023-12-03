@@ -1,0 +1,39 @@
+Aquí tienes una estructura de código SQL para la temática de cervezas, siguiendo un enfoque similar al que proporcionaste para libros y almacenes:
+
+
+CREATE TABLE IF NOT EXISTS BREWERY_OLD(
+   id bigint auto_increment,
+   nombre varchar(25)
+);
+
+CREATE TABLE IF NOT EXISTS BREWERY_NEW(
+   id bigint auto_increment,
+   nombre varchar(25)
+);
+
+CREATE TABLE IF NOT EXISTS BEER(
+   id bigint auto_increment,
+   nombre varchar(50),
+   fechaLanzamiento date,
+   brewery_old INT,
+   brewery_new INT,
+   FOREIGN KEY (brewery_old) REFERENCES BREWERY_OLD(id),
+   FOREIGN KEY (brewery_new) REFERENCES BREWERY_NEW(id)
+);
+Además, aquí tienes algunas sugerencias para los formularios y funcionalidades solicitadas:
+
+Formulario para Insertar Cervezas:
+
+El formulario debe incluir campos para el nombre de la cerveza, fecha de lanzamiento y una lista desplegable para seleccionar la cervecería asociada.
+Al insertar una cerveza, si la fecha de lanzamiento es anterior al año 2000, se debe asignar a una cervecería antigua; de lo contrario, se asignará a una cervecería nueva.
+Formulario para Insertar Cervecerías:
+
+Debe permitir ingresar el nombre de la cervecería y seleccionar si es una cervecería nueva o antigua.
+Listado de Almacenes y Cervezas:
+
+Mostrar una tabla con datos de todas las cervecerías (tanto antiguas como nuevas) y las cervezas registradas en cada una.
+Incluir información como el nombre de la cerveza, fecha de lanzamiento y el tipo de cervecería.
+Borrar Cervecería:
+
+Permitir la eliminación de una cervecería (ya sea nueva o antigua).
+Al borrar una cervecería, también se deben eliminar los datos de las cervezas asociadas.

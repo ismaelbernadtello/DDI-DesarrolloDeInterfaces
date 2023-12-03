@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thyneleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista BreweryNews</title>
+</head>
+<body>
+    <table>
+        <th>ID</th>
+        <th>Nombre</th>
+        <tr th:each="brewery : ${lista}">
+            <td th:text="${brewery.id}"></td>
+            <td th:text="${brewery.nombre}"></td>
+            <td><a th:href="@{'/modificarBreweryNew/'+${brewery.id}}"><input type="button" value="ACTUALIZAR"></a></td>
+            <td><a th:href="@{'/eliminarBreweryNew/'+${brewery.id}}"><input type="button" value="ELMIMINAR"></a></td>
+        </tr>
+    </table>
+</body>
+</html>
