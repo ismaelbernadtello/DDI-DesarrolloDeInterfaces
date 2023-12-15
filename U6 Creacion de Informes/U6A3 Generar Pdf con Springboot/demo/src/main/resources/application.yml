@@ -1,0 +1,12 @@
+
+spring:
+    main:
+        banner-mode: "off"
+    sql:
+        init:
+            platform: h2 #En el tutorial esta parte está mal, pone platform=h2. Hay que poner platform: h2
+
+logging:
+    level:
+        org:
+            springframework: ERROR
