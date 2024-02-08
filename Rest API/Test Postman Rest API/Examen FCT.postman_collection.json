@@ -1,0 +1,1115 @@
+{
+	"info": {
+		"_postman_id": "7631b32a-4a1b-4916-a9af-1de93b3fd09e",
+		"name": "Examen FCT",
+		"description": "Coleccion de url rest a cumplir en el examen\nNo debes guardar en base de datos\nDebes guardar los elementos en una lista de Alumnos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10114961"
+	},
+	"item": [
+		{
+			"name": "Alumnos",
+			"item": [
+				{
+					"name": "LIST ALL Alumnos API",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"",
+									"pm.test(\"list all students\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000)",
+									"    pm.response.to.have.status(200);",
+									"    pm.expect(jsonData instanceof Array).to.eql(true);",
+									"});",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.sendRequest({\r",
+									"    url: 'http://localhost:8080/api/ALUMNOS/INSERT',\r",
+									"     header: {\r",
+									"        'content-type': 'application/json',\r",
+									"        'x-site-code': pm.environment.get(\"x-site-code\")\r",
+									"    },\r",
+									"    method: 'POST',\r",
+									"    body: {\r",
+									"        mode: 'raw',\r",
+									"        raw: JSON.stringify(\r",
+									"            {\r",
+									"                \"nombre\":\"agustin\",\r",
+									"                \"fct\":\"NO\"\r",
+									"            }\r",
+									"\r",
+									"        )\r",
+									"    }\r",
+									"}, function (err, response) {\r",
+									"    console.log(response.json());\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/ALUMNOS/LIST",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"ALUMNOS",
+								"LIST"
+							]
+						},
+						"description": "List all alumnos from a list collection"
+					},
+					"response": [
+						{
+							"name": "Listado Alumnos ",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/ALUMNOS/LIST",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"ALUMNOS",
+										"LIST"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "[\n\t{\n\t    \"id\": 1,\n\t    \"nombre\": \"gorka\",\n\t    \"fct\": \"SI\"\n\t},\n\t{\n\t    \"id\": 2,\n\t    \"nombre\": \"juan\",\n\t    \"fct\": \"NO\"\n\t},\n\t{\n\t    \"id\": 3,\n\t    \"nombre\": \"agustin\",\n\t    \"fct\": \"SI\"\n\t}\n]"
+						}
+					]
+				},
+				{
+					"name": "INSERT Alumnos POST method",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"insert student\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+									"    var jsonData = pm.response.json();",
+									"    pm.response.to.have.status(201);",
+									"    ",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nombre\":\"agustin\",\n\t\"fct\":\"NO\",\n    \"id\": 23324\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/ALUMNOS/INSERT",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"ALUMNOS",
+								"INSERT"
+							]
+						},
+						"description": "insert one alumno using post method"
+					},
+					"response": [
+						{
+							"name": "INSERT Alumnos POST method",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/ALUMNO/INSERT/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"ALUMNO",
+										"INSERT",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n\t\"id\" : 4 ,\n\t\"nombre\" : \"pickachu\",\n\t\"fct\" : \"NO\"\n}"
+						}
+					]
+				},
+				{
+					"name": "DELETE Alumnos where Id 0",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"delete student with id zero\", function () {",
+									"    ",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+									"    pm.response.to.have.status(404);",
+									"",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/ALUMNOS/DELETE/?id=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"ALUMNOS",
+								"DELETE",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "0"
+								}
+							]
+						},
+						"description": "llamamos al metodo de borrar un alumno de la lista y le pasamos un identificador del id del alumno que deseamos borrar en este caso le mandamos elk identificador = y el servicio rest deberia devolver un 404 not found"
+					},
+					"response": [
+						{
+							"name": "DELETE Alumnos where Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/ALUMNO/DELETE/?id=3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"ALUMNO",
+										"DELETE",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"status": "Accepted",
+							"code": 202,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"nombre\": \"agustin\",\n    \"FCT\": \"NO\"\n}"
+						}
+					]
+				},
+				{
+					"name": "DELETE Alumnos where Id 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"delete student with id one\", function () {",
+									"    ",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+									"    pm.response.to.have.status(200);",
+									"",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.sendRequest({\r",
+									"    url: 'http://localhost:8080/api/ALUMNOS/INSERT',\r",
+									"     header: {\r",
+									"        'content-type': 'application/json',\r",
+									"        'x-site-code': pm.environment.get(\"x-site-code\")\r",
+									"    },\r",
+									"    method: 'POST',\r",
+									"    body: {\r",
+									"        mode: 'raw',\r",
+									"        raw: JSON.stringify(\r",
+									"            {\r",
+									"                \"nombre\":\"agustin\",\r",
+									"                \"fct\":\"NO\"\r",
+									"            }\r",
+									"\r",
+									"        )\r",
+									"    }\r",
+									"}, function (err, response) {\r",
+									"    console.log(response.json());\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/ALUMNOS/DELETE/?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"ALUMNOS",
+								"DELETE",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						},
+						"description": "llamamos al metodo de borrar un alumno de la lista y le pasamos un identificador del id del alumno que deseamos borrar en este caso le mandamos elk identificador = y el servicio rest deberia devolver un 404 not found"
+					},
+					"response": [
+						{
+							"name": "DELETE Alumnos where Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/ALUMNO/DELETE/?id=3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"ALUMNO",
+										"DELETE",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"status": "Accepted",
+							"code": 202,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"nombre\": \"agustin\",\n    \"FCT\": \"NO\"\n}"
+						}
+					]
+				},
+				{
+					"name": "UPDATE ALUMNO 2 fct=yes",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"update fct student 2\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+									"    pm.response.to.have.status(202);",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData.fct).to.eql(\"yes\");",
+									" ",
+									"});",
+									"",
+									"pm.sendRequest({",
+									"    url: 'http://localhost:8080/api/ALUMNOS/DELETEALL'",
+									"   ",
+									"}, function (err, response) {",
+									"    console.log(response.json());",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.sendRequest({\r",
+									"    url: 'http://localhost:8080/api/ALUMNOS/INSERT',\r",
+									"     header: {\r",
+									"        'content-type': 'application/json',\r",
+									"        'x-site-code': pm.environment.get(\"x-site-code\")\r",
+									"    },\r",
+									"    method: 'POST',\r",
+									"    body: {\r",
+									"        mode: 'raw',\r",
+									"        raw: JSON.stringify(\r",
+									"            {\r",
+									"                \"nombre\":\"agustin\",\r",
+									"                \"fct\":\"NO\"\r",
+									"            }\r",
+									"\r",
+									"        )\r",
+									"    }\r",
+									"}, function (err, response) {\r",
+									"    console.log(response.json());\r",
+									"});\r",
+									"\r",
+									"pm.sendRequest({\r",
+									"    url: 'http://localhost:8080/api/ALUMNOS/INSERT',\r",
+									"     header: {\r",
+									"        'content-type': 'application/json',\r",
+									"        'x-site-code': pm.environment.get(\"x-site-code\")\r",
+									"    },\r",
+									"    method: 'POST',\r",
+									"    body: {\r",
+									"        mode: 'raw',\r",
+									"        raw: JSON.stringify(\r",
+									"            {\r",
+									"                \"nombre\":\"agustin\",\r",
+									"                \"fct\":\"NO\"\r",
+									"            }\r",
+									"\r",
+									"        )\r",
+									"    }\r",
+									"}, function (err, response) {\r",
+									"    console.log(response.json());\r",
+									"});\r",
+									"\r",
+									"pm.sendRequest({\r",
+									"    url: 'http://localhost:8080/api/ALUMNOS/INSERT',\r",
+									"     header: {\r",
+									"        'content-type': 'application/json',\r",
+									"        'x-site-code': pm.environment.get(\"x-site-code\")\r",
+									"    },\r",
+									"    method: 'POST',\r",
+									"    body: {\r",
+									"        mode: 'raw',\r",
+									"        raw: JSON.stringify(\r",
+									"            {\r",
+									"                \"nombre\":\"agustin\",\r",
+									"                \"fct\":\"NO\"\r",
+									"            }\r",
+									"\r",
+									"        )\r",
+									"    }\r",
+									"}, function (err, response) {\r",
+									"    console.log(response.json());\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/ALUMNOS/UPDATE/2/?fct=yes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"ALUMNOS",
+								"UPDATE",
+								"2",
+								""
+							],
+							"query": [
+								{
+									"key": "fct",
+									"value": "yes"
+								}
+							]
+						},
+						"description": "esta request hace que el alumno 2 vaya de fct"
+					},
+					"response": [
+						{
+							"name": "UPDATE ALUMNO 2 fct=yes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/ALUMNO/2/?fct=yes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"ALUMNO",
+										"2",
+										""
+									],
+									"query": [
+										{
+											"key": "fct",
+											"value": "yes"
+										}
+									]
+								}
+							},
+							"status": "Accepted",
+							"code": 202,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"nombre\": \"juan\",\n    \"fct\": \"SI\"\n}"
+						}
+					]
+				},
+				{
+					"name": "UPDATE ALUMNO 2 fct=no",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"update fct student 2\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+									"    pm.response.to.have.status(202);",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData.fct).to.eql(\"no\");",
+									" ",
+									"});",
+									"",
+									"pm.sendRequest({",
+									"    url: 'http://localhost:8080/api/ALUMNOS/DELETEALL'",
+									"   ",
+									"}, function (err, response) {",
+									"    console.log(response.json());",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.sendRequest({\r",
+									"    url: 'http://localhost:8080/api/ALUMNOS/INSERT',\r",
+									"     header: {\r",
+									"        'content-type': 'application/json',\r",
+									"        'x-site-code': pm.environment.get(\"x-site-code\")\r",
+									"    },\r",
+									"    method: 'POST',\r",
+									"    body: {\r",
+									"        mode: 'raw',\r",
+									"        raw: JSON.stringify(\r",
+									"            {\r",
+									"                \"nombre\":\"agustin\",\r",
+									"                \"fct\":\"yes\"\r",
+									"            }\r",
+									"\r",
+									"        )\r",
+									"    }\r",
+									"}, function (err, response) {\r",
+									"    console.log(response.json());\r",
+									"});\r",
+									"\r",
+									"pm.sendRequest({\r",
+									"    url: 'http://localhost:8080/api/ALUMNOS/INSERT',\r",
+									"     header: {\r",
+									"        'content-type': 'application/json',\r",
+									"        'x-site-code': pm.environment.get(\"x-site-code\")\r",
+									"    },\r",
+									"    method: 'POST',\r",
+									"    body: {\r",
+									"        mode: 'raw',\r",
+									"        raw: JSON.stringify(\r",
+									"            {\r",
+									"                \"nombre\":\"agustin\",\r",
+									"                \"fct\":\"yes\"\r",
+									"            }\r",
+									"\r",
+									"        )\r",
+									"    }\r",
+									"}, function (err, response) {\r",
+									"    console.log(response.json());\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/ALUMNOS/UPDATE/2/?fct=no",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"ALUMNOS",
+								"UPDATE",
+								"2",
+								""
+							],
+							"query": [
+								{
+									"key": "fct",
+									"value": "no"
+								}
+							]
+						},
+						"description": "esta request hace que el alumno 2 no vaya de fct"
+					},
+					"response": [
+						{
+							"name": "UPDATE ALUMNO 2 fct=no",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/ALUMNO/2/?fct=no",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"ALUMNO",
+										"2",
+										""
+									],
+									"query": [
+										{
+											"key": "fct",
+											"value": "no"
+										}
+									]
+								}
+							},
+							"status": "Accepted",
+							"code": 202,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"nombre\": \"juan\",\n    \"fct\": \"NO\"\n}"
+						}
+					]
+				},
+				{
+					"name": "UPDATE ALUMNO 1 fct=yes",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"update fct student 1\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+									"    pm.response.to.have.status(202);",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData.fct).to.eql(\"yes\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.sendRequest({\r",
+									"    url: 'http://localhost:8080/api/ALUMNOS/INSERT',\r",
+									"     header: {\r",
+									"        'content-type': 'application/json',\r",
+									"        'x-site-code': pm.environment.get(\"x-site-code\")\r",
+									"    },\r",
+									"    method: 'POST',\r",
+									"    body: {\r",
+									"        mode: 'raw',\r",
+									"        raw: JSON.stringify(\r",
+									"            {\r",
+									"                \"nombre\":\"agustin\",\r",
+									"                \"fct\":\"NO\"\r",
+									"            }\r",
+									"\r",
+									"        )\r",
+									"    }\r",
+									"}, function (err, response) {\r",
+									"    console.log(response.json());\r",
+									"});\r",
+									"\r",
+									"pm.sendRequest({\r",
+									"    url: 'http://localhost:8080/api/ALUMNOS/INSERT',\r",
+									"     header: {\r",
+									"        'content-type': 'application/json',\r",
+									"        'x-site-code': pm.environment.get(\"x-site-code\")\r",
+									"    },\r",
+									"    method: 'POST',\r",
+									"    body: {\r",
+									"        mode: 'raw',\r",
+									"        raw: JSON.stringify(\r",
+									"            {\r",
+									"                \"nombre\":\"agustin\",\r",
+									"                \"fct\":\"NO\"\r",
+									"            }\r",
+									"\r",
+									"        )\r",
+									"    }\r",
+									"}, function (err, response) {\r",
+									"    console.log(response.json());\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/ALUMNOS/UPDATE/1/?fct=yes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"ALUMNOS",
+								"UPDATE",
+								"1",
+								""
+							],
+							"query": [
+								{
+									"key": "fct",
+									"value": "yes"
+								}
+							]
+						},
+						"description": "esta request hace que el alumno uno vaya de fct\ndebe devolver el codigo 201"
+					},
+					"response": [
+						{
+							"name": "UPDATE ALUMNO 1 fct=yes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/ALUMNO/1/?fct=yes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"ALUMNO",
+										"1",
+										""
+									],
+									"query": [
+										{
+											"key": "fct",
+											"value": "yes"
+										}
+									]
+								}
+							},
+							"status": "Accepted",
+							"code": 202,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"nombre\": \"gorka\",\n    \"fct\": \"SI\"\n}"
+						}
+					]
+				},
+				{
+					"name": "UPDATE ALUMNO 1 fct=no",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"update fct student 1\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+									"    pm.response.to.have.status(202);",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData.fct).to.eql(\"no\");",
+									" ",
+									"});",
+									"",
+									"pm.sendRequest({",
+									"    url: 'http://localhost:8080/api/ALUMNOS/DELETEALL'",
+									"   ",
+									"}, function (err, response) {",
+									"    console.log(response.json());",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.sendRequest({\r",
+									"    url: 'http://localhost:8080/api/ALUMNOS/INSERT',\r",
+									"     header: {\r",
+									"        'content-type': 'application/json',\r",
+									"        'x-site-code': pm.environment.get(\"x-site-code\")\r",
+									"    },\r",
+									"    method: 'POST',\r",
+									"    body: {\r",
+									"        mode: 'raw',\r",
+									"        raw: JSON.stringify(\r",
+									"            {\r",
+									"                \"nombre\":\"agustin\",\r",
+									"                \"fct\":\"NO\"\r",
+									"            }\r",
+									"\r",
+									"        )\r",
+									"    }\r",
+									"}, function (err, response) {\r",
+									"    console.log(response.json());\r",
+									"});\r",
+									"\r",
+									"pm.sendRequest({\r",
+									"    url: 'http://localhost:8080/api/ALUMNOS/INSERT',\r",
+									"     header: {\r",
+									"        'content-type': 'application/json',\r",
+									"        'x-site-code': pm.environment.get(\"x-site-code\")\r",
+									"    },\r",
+									"    method: 'POST',\r",
+									"    body: {\r",
+									"        mode: 'raw',\r",
+									"        raw: JSON.stringify(\r",
+									"            {\r",
+									"                \"nombre\":\"agustin\",\r",
+									"                \"fct\":\"NO\"\r",
+									"            }\r",
+									"\r",
+									"        )\r",
+									"    }\r",
+									"}, function (err, response) {\r",
+									"    console.log(response.json());\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/ALUMNOS/UPDATE/1/?fct=no",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"ALUMNOS",
+								"UPDATE",
+								"1",
+								""
+							],
+							"query": [
+								{
+									"key": "fct",
+									"value": "no"
+								}
+							]
+						},
+						"description": "esta request hace que el alumno uno NO vaya de fct"
+					},
+					"response": [
+						{
+							"name": "UPDATE ALUMNO 1 fct=no",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/ALUMNO/1/?fct=no",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"ALUMNO",
+										"1",
+										""
+									],
+									"query": [
+										{
+											"key": "fct",
+											"value": "no"
+										}
+									]
+								}
+							},
+							"status": "Accepted",
+							"code": 202,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"nombre\": \"gorka\",\n    \"fct\": \"NO\"\n}"
+						}
+					]
+				},
+				{
+					"name": "UPDATE ALUMNO 0 fct=no",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"time below 1000\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+									"});",
+									"pm.test(\"Status code is 409\", function () {",
+									"    pm.response.to.have.status(409);",
+									"});",
+									"",
+									"",
+									"pm.sendRequest({",
+									"    url: 'http://localhost:8080/api/ALUMNOS/DELETEALL'",
+									"   ",
+									"}, function (err, response) {",
+									"    console.log(response.json());",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/ALUMNOS/UPDATE/0/?fct=no",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"ALUMNOS",
+								"UPDATE",
+								"0",
+								""
+							],
+							"query": [
+								{
+									"key": "fct",
+									"value": "no"
+								}
+							]
+						},
+						"description": "esta request hace que el alumno uno NO vaya de fct"
+					},
+					"response": [
+						{
+							"name": "UPDATE ALUMNO 1 fct=no",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/ALUMNO/0/?fct=no",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"ALUMNO",
+										"0",
+										""
+									],
+									"query": [
+										{
+											"key": "fct",
+											"value": "no"
+										}
+									]
+								}
+							},
+							"status": "Conflict",
+							"code": 409,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"nombre\": \"gorka\",\n    \"fct\": \"NO\"\n}"
+						}
+					]
+				},
+				{
+					"name": "DeleteAll",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/ALUMNOS/DELETEALL",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"ALUMNOS",
+								"DELETEALL"
+							]
+						},
+						"description": "Este test borra todos los alumnos de la lista"
+					},
+					"response": []
+				}
+			],
+			"description": "Crea un servicio request para atendes y comprobar los alumnos que se van a marchar de FCT",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:8080",
+			"type": "string"
+		},
+		{
+			"key": "randomNumber",
+			"value": "1",
+			"type": "string"
+		}
+	]
+}
