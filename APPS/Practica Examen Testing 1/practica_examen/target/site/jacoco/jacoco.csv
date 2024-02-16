@@ -1,0 +1,11 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+demo,com.example.demo.service,StudentService,59,48,2,4,12,12,6,5,5,3
+demo,com.example.demo.controller,StudentController,2,61,1,1,1,17,1,7,0,7
+demo,com.example.demo.controller,HelloController,7,12,0,0,2,3,1,2,1,2
+demo,com.example.demo.model,StudentRowMapper,0,25,0,0,0,6,0,2,0,2
+demo,com.example.demo.model,Student,0,36,0,0,0,16,0,8,0,8
+demo,com.example.demo.controller.database,MySQLConnection,7,3,0,0,4,1,2,1,2,1
+demo,com.example.demo.controller.database,PostgresConnection,10,0,0,0,5,0,3,0,3,0
+demo,com.example.demo.controller.database,H2Connection,10,0,0,0,5,0,3,0,3,0
+demo,com.example.demo.repository,StudentRepository,61,50,0,0,8,10,4,5,4,5
+demo,com.example.demo,DemoApplication,5,3,0,0,2,1,1,1,1,1
