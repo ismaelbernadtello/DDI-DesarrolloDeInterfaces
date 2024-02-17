@@ -13,7 +13,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web:2.3.1.RELEASE'
     implementation 'org.springframework:spring-context:5.2.7.RELEASE'
     implementation 'org.reflections:reflections:0.9.12'
-    implementation 'org.springdoc:springdoc-openapi-ui:1.5.8'
+    implementation 'org.springdoc:springdoc-openapi-ui:1.5.8' // DEPENDENCIA DE OPENAPI
 
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
@@ -27,6 +27,7 @@ test {
 bootJar {
     mainClassName = 'com.xyz.openapi.server.Application'
 }
+
 
 // https://github.com/OpenAPITools/openapi-generator/blob/master/modules/openapi-generator-gradle-plugin/README.adoc
 openApiGenerate {
